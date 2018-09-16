@@ -1,13 +1,13 @@
 {
     "organizers": [
         {
-            "name": "Brian Martin",
-            "title": "organizer title",
-            "description": "organizer description",
-            "twitter_url": "organizer_twitter_url",
-            "facebook_url": "organizer_facebook_url",
-            "headshot_url": "organizer_headshot_url",
-            "url": "organizer_url"        
+            "name": "Jay Harris",
+            "title": "title",
+            "description": "description",
+            "twitter_url": "twitter_url",
+            "facebook_url": "facebook_url",
+            "headshot_url": "img/team/1.jpg",
+            "url": "https://annarbor.givecamp.org"        
         }
     ]
 }
