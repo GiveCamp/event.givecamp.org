@@ -1,0 +1,13 @@
+{
+    "sponsors": [
+        {
+            "name": "Brian Martin",
+            "description": "Suprisingly cultured",
+            "twitter_url": "twitter_url",
+            "facebook_url": "facebook_url",
+            "logo_url": "img/logos/GiveCamp.png",
+            "url": "https://annarbor.givecamp.org",
+            "is_featured": true
+        }
+    ]
+}
