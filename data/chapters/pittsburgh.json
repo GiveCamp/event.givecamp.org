@@ -1,0 +1,18 @@
+{
+	"url": "http://pghgivecamp.org/",
+	"title": "Pittsburgh GiveCamp",
+	"city": "Pittsburgh",
+	"state": "Pennsylvania",
+	"latitude": 40.421854,
+	"longitude": -79.993875,
+	"events":[
+		{
+			"start_date": "2018-10-19",
+			"end_date": "2018-10-21",
+			"street": "753 E Warrington Ave",
+			"city": "Pittsburgh",
+			"state": "Pennsylvania",
+			"postal_code": 15210
+		}
+	]
+}

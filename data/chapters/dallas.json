@@ -1,0 +1,18 @@
+{
+		"url": "https://annarborgivecamp.org/",
+		"title": "Dallas GiveCamp",
+		"city": "Plano",
+		"state": "Texas",
+		"latitude": 33.079490, 
+		"longitude": -96.814540,
+		"events":[
+			{
+				"start_date": "2018-09-14",
+				"end_date": "2018-09-16",
+				"street": "5543 Legacy Drive",
+				"city": "plano",
+				"state": "Texas",
+				"postal_code": 75024
+			}
+		]
+	}
