@@ -2,14 +2,14 @@
     "events": [
         {
             "title": "GiveCamp Ann Arbor",
-            "start_date": "2018-09-14",
-            "end_date": "2018-09-16",
+            "start_date": "2018-09-14T17:00:00",
+            "end_date": "2018-09-16T12:00:00",
             "venue_name": "Washtenaw Community College",
             "venue_address": {
                 "street_1": "4800 E Huron River Dr",
                 "street_2": "",
                 "city": "Ann Arbor",
-                "state": "Michigan",
+                "state": "MI",
                 "country": "United States",
                 "postal_code": "48105"
             },

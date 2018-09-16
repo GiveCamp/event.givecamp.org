@@ -78,6 +78,10 @@ require 'date'
      prev_chapters = data.chapters.select { |key, chapter| get_previous_events(chapter).length > 0 || false }
    end
 
+  # def get_start_date_from_event(event)
+  #   date = event.start_date.split
+  # end
+
  end
 
 configure :development do

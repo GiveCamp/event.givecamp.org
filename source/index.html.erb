@@ -16,13 +16,101 @@ header: "header"
 </header>    
 
 <section>
-  <div class="container">    
-    <h1>Mission</h1>
-    <h1>Event Information</h1>
-    <h1>Volunteer Signup</h1>
-    <h1>Propose a Project</h1>
-    <h1>Sponsors</h1>
-    <h1>Impact</h1>
-    <h1>Past Projects</h1>  
+  <div class="container">  
+    <div class="row">
+      <div class="col-lg-12">
+          <h1>Event Information</h1>
+          <% events = data.events.events.select{ |event| event.title != nil && event.start_date != nil } %>
+          <% events = events.sort_by{ |event| event.start_date } %>
+          <% events.each do |event| %>
+            <%= event.title %><br>
+            <%= Time.iso8601(event.start_date).strftime('%b %e, %Y %T') %>
+            <% if event.end_date %>
+              - <%= Time.iso8601(event.end_date).strftime('%b %e, %Y %T') %>
+            <% end %>
+            <br>
+            <% if event.venue_address.street_1 && event.venue_address.city && event.venue_address.state && event.venue_address.postal_code %>
+              <a href="http://maps.google.com/?q=<%= event.venue_address.street_1 event.venue_address.city event.venue_address.state event.venue_address.postal_code %>">
+                <%= event.venue_address.street_1 %><br>
+                <% if event.venue_address.street_2 && event.venue_address.street_2.length > 0 %>
+                  <%= event.venue_address.street_2 %><br>
+                <% end %>
+                <%= event.venue_address.city %> <%= event.venue_address.state %>, <%= event.venue_address.postal_code %>
+              </a>
+              <br>
+            <% end %>
+            <% if event.resource_url && event.resource_url.length > 0 && event.resource_link_text && event.resource_link_text.length > 0 %>
+              <a class="btn btn-primary btn-lg" href="<%= event.resource_url %>"><%= event.resource_link_text %></a>  
+            <% end %>
+            <% if event.chartiy_proposal_url && event.chartiy_proposal_url.length > 0 %>
+              <a class="btn btn-primary btn-lg" href="<%= event.chartiy_proposal_url %>">Charity Proposals</a>  
+            <% end %>
+            <% if event.volunteer_registration_url && event.volunteer_registration_url.length > 0 %>
+              <a class="btn btn-primary btn-lg" href="<%= event.volunteer_registration_url %>">Volunteer Signup</a>  
+            <% end %>
+            <br>
+          <% end %>
+      </div>
+    </div>  
+    <br>
+
+    <div class="row">
+      <div class="col-lg-12">
+          <h1>Our Mission</h1>
+          <p><%= config[:chapter_mission] %></p>
+      </div>
+    </div>
+    <br>
+
+    <div class="row">
+      <div class="col-lg-12">
+          <h1>Our Sponsors</h1>
+          <% sponsors = data.sponsors.sponsors.select{ |sponsor| sponsor.name && sponsor.is_featured }.sort_by{ |sponsor| sponsor.name } %>
+          <% sponsors.each do |sponsor| %>
+              <% if sponsor.url && !sponsor.url.empty? && sponsor.logo_url && !sponsor.logo_url.empty? %>
+                <a href="<%= sponsor.url %>">
+                  <img title="<%= sponsor.name %>" src="<%= sponsor.logo_url %>" width="150px">
+                </a><br>
+              <% end %>
+            <%= sponsor.name %><br>
+            <%= sponsor.description %><br>
+            <% if sponsor.twitter_url && !sponsor.twitter_url.empty? %>
+              <a href="https://twitter.com/GiveCamp">
+                <i class="fab fa-twitter"></i>
+              </a>&nbsp;
+            <% end %>
+            <% if sponsor.facebook_url && !sponsor.facebook_url.empty? %>
+              <a href="https://www.facebook.com/givecamp.org">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            <% end %>
+          <% end %>
+      </div>
+    </div>
+    <br>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <h1>Our Impact</h1>
+      </div>
+    </div>
+    <br>
+
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <h1>Charities Helped</h1>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <h1>Total In-Kind Donations</h1>
+      </div>
+    </div>
+    <br>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <h1>Past Projects</h1>
+      </div>
+    </div>
+    <br>
   </div>
 </section>
