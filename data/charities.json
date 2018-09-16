@@ -1,0 +1,19 @@
+{
+    "charities": [
+        {
+            "charity_name": "GiveCamp inc.",
+            "charity_mission": "Support our communities by bringing together motivated volunteers to dedicate their professional expertise, deep insights and individual talents to further the missions of local charitable organizations through the applied use of knowledge sharing, technology solutions and innovative design.",
+            "charity_twitter_url": "twitter_url",
+            "charity_facebook_url": "facebook_url",
+            "charity_representative": "Jay Harris",
+            "charity_url": "https://annarbor.givecamp.org",
+            "event_date": "2018-09-14",
+            "project_title": "Website Facelift",
+            "project_url": "https://annarbor.givecamp.org",
+            "project_image_url": "/img/logos/GiveCamp.png",
+            "project_leader": "Jeffery Fransler",
+            "is_featured": true
+        }
+        
+    ]
+}
