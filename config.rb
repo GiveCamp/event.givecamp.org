@@ -81,6 +81,8 @@ require 'date'
  end
 
 configure :development do
+  config[:email] = "info@givecamp.org"
+  config[:host] = "https://givecamp.org"
   activate :favicon_maker, :template_dir => "source/_assets/icons/", :icons => {
     "icon.png" => [
       { icon: "favicon-160x160.png" },                                  # For Opera Speed Dial (up to Opera 12; this icon is deprecated starting from Opera 15), although the optimal icon is not square but rather 256x160. If Opera is a major platform for you, you should create this icon yourself.
